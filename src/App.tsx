@@ -1,8 +1,12 @@
+import { QueryProvider } from './providers/QueryProvider';
 import { WeatherApp } from './components/WeatherApp';
-import './App.css';
 
 function App() {
-  return <WeatherApp />;
+  return (
+    <QueryProvider>
+      <WeatherApp />
+    </QueryProvider>
+  );
 }
 
 export default App;

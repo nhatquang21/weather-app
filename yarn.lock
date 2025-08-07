@@ -336,6 +336,11 @@
     "@eslint/core" "^0.15.1"
     levn "^0.4.1"
 
+"@heroicons/react@^2.2.0":
+  version "2.2.0"
+  resolved "https://reg.nexpando.com/@heroicons/react/-/react-2.2.0.tgz"
+  integrity sha512-LMcepvRaS9LYHJGsF0zzmgKCUim/X3N/DQKc4jepAXJ7l8QxJ1PmxJzqplF2Z3FE4PqBAIGyJAQ/w4B5dsqbtQ==
+
 "@humanfs/core@^0.19.1":
   version "0.19.1"
   resolved "https://reg.nexpando.com/@humanfs/core/-/core-0.19.1.tgz"
@@ -561,6 +566,18 @@
     "@tailwindcss/oxide" "4.1.11"
     tailwindcss "4.1.11"
 
+"@tanstack/query-core@5.83.1":
+  version "5.83.1"
+  resolved "https://reg.nexpando.com/@tanstack/query-core/-/query-core-5.83.1.tgz"
+  integrity sha512-OG69LQgT7jSp+5pPuCfzltq/+7l2xoweggjme9vlbCPa/d7D7zaqv5vN/S82SzSYZ4EDLTxNO1PWrv49RAS64Q==
+
+"@tanstack/react-query@^5.84.1":
+  version "5.84.1"
+  resolved "https://reg.nexpando.com/@tanstack/react-query/-/react-query-5.84.1.tgz"
+  integrity sha512-zo7EUygcWJMQfFNWDSG7CBhy8irje/XY0RDVKKV4IQJAysb+ZJkkJPcnQi+KboyGUgT+SQebRFoTqLuTtfoDLw==
+  dependencies:
+    "@tanstack/query-core" "5.83.1"
+
 "@ts-morph/common@~0.19.0":
   version "0.19.0"
   resolved "https://reg.nexpando.com/@ts-morph/common/-/common-0.19.0.tgz"
@@ -631,7 +648,7 @@
   resolved "https://reg.nexpando.com/@types/react-dom/-/react-dom-19.1.7.tgz"
   integrity sha512-i5ZzwYpqjmrKenzkoLM2Ibzt6mAsM7pxB6BCIouEVVmgiqaMj1TjaK7hnA36hbW5aZv20kx7Lw6hWzPWg0Rurw==
 
-"@types/react@^19.0.0", "@types/react@^19.1.9":
+"@types/react@^19.0.0", "@types/react@^19.1.9", "@types/react@>=18.0.0":
   version "19.1.9"
   resolved "https://reg.nexpando.com/@types/react/-/react-19.1.9.tgz"
   integrity sha512-WmdoynAX8Stew/36uTSVMcLJJ1KRh6L3IZRx1PZ7qJtBqT3dYTgyDTx8H1qoRghErydW7xw9mSJ3wS//tCRpFA==
@@ -2381,7 +2398,7 @@ react-refresh@^0.17.0:
   resolved "https://reg.nexpando.com/react-refresh/-/react-refresh-0.17.0.tgz"
   integrity sha512-z6F7K9bV85EfseRCp2bzrpyQ0Gkw1uLoCel9XBVWPg/TjRj94SkJzUTGfOa4bs7iJvBWtQG0Wq7wnI0syw3EBQ==
 
-react@^19.1.1:
+"react@^18 || ^19", react@^19.1.1, "react@>= 16 || ^19.0.0-rc", react@>=18.0.0:
   version "19.1.1"
   resolved "https://reg.nexpando.com/react/-/react-19.1.1.tgz"
   integrity sha512-w8nqGImo45dmMIfljjMwOGtbmC/mk4CMYhWIicdSflH91J9TyCyczcPFXJzrZ/ZXcgGRFeP6BU0BEJTw6tZdfQ==
@@ -3027,3 +3044,8 @@ zod@^3.20.2, zod@^3.23.8, zod@^3.24.1:
   version "3.25.76"
   resolved "https://reg.nexpando.com/zod/-/zod-3.25.76.tgz"
   integrity sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==
+
+zustand@^5.0.7:
+  version "5.0.7"
+  resolved "https://reg.nexpando.com/zustand/-/zustand-5.0.7.tgz"
+  integrity sha512-Ot6uqHDW/O2VdYsKLLU8GQu8sCOM1LcoE8RwvLv9uuRT9s6SOHCKs0ZEOhxg+I1Ld+A1Q5lwx+UlKXXUoCZITg==
