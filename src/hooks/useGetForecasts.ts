@@ -5,7 +5,6 @@ import { weatherKeys } from './queryKeys';
 import { useWeatherStore } from '../stores/weatherStore';
 import type { ForecastData } from '../types/weather';
 
-// Hook để fetch 5-day forecast by city và auto update store
 // Calls: https://api.openweathermap.org/data/2.5/forecast?q={city}&appid={API key}
 export function useGetForecasts(city: string, enabled: boolean = true) {
   const { setForecast, setLoading, setError } = useWeatherStore();

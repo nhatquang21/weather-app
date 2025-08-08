@@ -1,19 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
 import { useEffect } from 'react';
-import { config } from '../config/env';
+import { config } from '@/config/env';
 import { weatherKeys } from './queryKeys';
 import { useWeatherStore } from '../stores/weatherStore';
 import type { WeatherData } from '../types/weather';
 
-// Calls: https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API key}
 export function useGetWeather(city: string, enabled: boolean = true) {
-  const {
-    setCurrentWeather,
-    setLoading,
-    setError,
-    addToSearchHistory,
-    setCurrentLocation,
-  } = useWeatherStore();
+  const { setCurrentWeather, setLoading, setError } = useWeatherStore();
 
   const query = useQuery({
     queryKey: [...weatherKeys.all, 'current', city],
@@ -50,18 +43,10 @@ export function useGetWeather(city: string, enabled: boolean = true) {
   useEffect(() => {
     if (query.data) {
       setCurrentWeather(query.data);
-      setCurrentLocation(`${query.data.name}, ${query.data.sys.country}`);
-      addToSearchHistory(city);
       setError(null);
+      // Removed addToSearchHistory - this should only happen on explicit search
     }
-  }, [
-    query.data,
-    setCurrentWeather,
-    setCurrentLocation,
-    addToSearchHistory,
-    setError,
-    city,
-  ]);
+  }, [query.data, setCurrentWeather, setError]);
 
   useEffect(() => {
     setLoading(query.isLoading);

@@ -58,7 +58,7 @@ export interface WeatherData {
 }
 
 // Forecast Item (individual forecast entry)
-export interface ForecastItem {
+export interface ForecastItemType {
   dt: number; // Unix timestamp
   main: MainWeatherData;
   weather: WeatherCondition[];
@@ -87,7 +87,7 @@ export interface ForecastData {
   cod: string; // Internal parameter
   message: number; // Internal parameter
   cnt: number; // Number of forecast items
-  list: ForecastItem[];
+  list: ForecastItemType[];
   city: CityInfo;
 }
 
@@ -107,7 +107,7 @@ export interface ForecastApiResponse {
 // Utility types for processing
 export interface DailyForecast {
   date: string;
-  items: ForecastItem[];
+  items: ForecastItemType[];
   minTemp: number;
   maxTemp: number;
   dominantWeather: WeatherCondition;

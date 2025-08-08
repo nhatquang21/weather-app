@@ -1,13 +1,11 @@
-import { useGetForecasts } from '@/hooks/useGetForecasts';
 import { useWeatherStore } from '@/stores/weatherStore';
-import type { ForecastItem } from '@/types/weather';
-import { ForeCastItem } from './ForecastItem';
+import type { ForecastItemType } from '@/types/weather';
+import { ForecastItem } from './ForecastItem';
 import { useMemo } from 'react';
 import { formatDateHeader, groupForecastsByDate } from '@/utils/weatherUtils';
 
 export const ForecastList = () => {
-  const { forecast, currentLocation } = useWeatherStore();
-  useGetForecasts(currentLocation);
+  const { forecast } = useWeatherStore();
 
   const groupedForecasts = useMemo(() => {
     if (!forecast) return {};
@@ -36,8 +34,8 @@ export const ForecastList = () => {
 
               {/* Forecast Items for this date */}
               <div className="space-y-1">
-                {groupedForecasts[dateKey].map((item: ForecastItem) => (
-                  <ForeCastItem key={item.dt} item={item} />
+                {groupedForecasts[dateKey].map((item: ForecastItemType) => (
+                  <ForecastItem key={item.dt} item={item} />
                 ))}
               </div>
             </div>

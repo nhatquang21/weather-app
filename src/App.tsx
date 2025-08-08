@@ -1,10 +1,12 @@
-import { QueryProvider } from './providers/QueryProvider';
-import { WeatherApp } from './components/WeatherApp';
+import { QueryProvider } from '@/providers/QueryProvider';
+import AppRouter from '@/routes/AppRouter';
+import { StorageInitializer } from '@/components/StorageInitializer';
 
 function App() {
   return (
     <QueryProvider>
-      <WeatherApp />
+      <StorageInitializer />
+      <AppRouter />
     </QueryProvider>
   );
 }

@@ -7,7 +7,7 @@ import { globalIgnores } from 'eslint/config';
 import prettier from 'eslint-config-prettier';
 
 export default tseslint.config([
-  globalIgnores(['dist']),
+  globalIgnores(['dist', 'src/components/ui/**']),
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
@@ -24,7 +24,7 @@ export default tseslint.config([
     rules: {
       'max-lines-per-function': [
         'error',
-        { max: 50, skipBlankLines: true, skipComments: true },
+        { max: 100, skipBlankLines: true, skipComments: true },
       ],
       'max-lines': [
         'error',

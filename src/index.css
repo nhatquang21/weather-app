@@ -1,5 +1,1 @@
 @import "tailwindcss";
-
-.shadow-super-large {
-    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.3);
-}

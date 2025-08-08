@@ -2,7 +2,7 @@
  * Utility functions for weather data formatting and processing
  */
 
-import type { ForecastItem } from '@/types/weather';
+import type { ForecastItemType } from '@/types/weather';
 
 /**
  * Format temperature with proper unit display
@@ -184,8 +184,8 @@ export function getComfortLevel(
 }
 
 // Group forecast items by date
-export function groupForecastsByDate(forecasts: ForecastItem[]) {
-  const grouped: { [key: string]: ForecastItem[] } = {};
+export function groupForecastsByDate(forecasts: ForecastItemType[]) {
+  const grouped: { [key: string]: ForecastItemType[] } = {};
 
   forecasts.forEach(item => {
     const date = item.dt_txt.split(' ')[0];
